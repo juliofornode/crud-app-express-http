@@ -6,8 +6,8 @@ var favicon = require('serve-favicon');
 var path = require('path');
 var logger = require('morgan');
 
-mongoose.connect('mongodb://localhost/booksApp', function() {
-    console.log('connected to booksApp db.');
+mongoose.connect('mongodb://localhost/expressHttp', function() {
+    console.log('connected to expressHttp db.');
 });
 
 var app = express();
