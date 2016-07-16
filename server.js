@@ -22,9 +22,16 @@ app.use(bodyParser.json());
 app.use(express.static('./client'));
 app.use(favicon(path.join(__dirname, '/client/favicon.ico')));
 app.use(logger('dev'));
+app.set('port', process.env.PORT || 3700);
+var port = app.get('port');
+
+
 
 app.use('/', routes);
 
-app.listen(3700, function() {
+
+
+
+app.listen(port, function() {
     console.log('Listening on port 3700');
 });
