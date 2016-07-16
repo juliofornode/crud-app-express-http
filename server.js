@@ -6,9 +6,14 @@ var favicon = require('serve-favicon');
 var path = require('path');
 var logger = require('morgan');
 
-mongoose.connect('mongodb://localhost/expressHttp', function() {
+/*mongoose.connect('mongodb://localhost/expressHttp', function() {
+    console.log('connected to expressHttp db.');
+});*/
+
+mongoose.connect('mongodb://julio:password@ds023105.mlab.com:23105/simple-crud', function() {
     console.log('connected to expressHttp db.');
 });
+
 
 var app = express();
 
